@@ -54,4 +54,4 @@ You don't need to write a single line of Modbus polling code. The gateway automa
 Adding it to your HA dashboard is trivial. Just copy the `mqtt_sensor.yaml` provided in this repository into your HA configuration.
 
 ---
-*For the exact wiring diagrams and hardware specs of the Edge Gateway used in this integration, visit the [VALTORIS VT-DTU500 Official Page](https://valtoris.com).*
+*For the exact wiring diagrams and hardware specs of the Edge Gateway used in this integration, visit the [VALTORIS VT-DTU500 Official Page](https://valtoris.com/product-center/industrial-cellular-modem/).*
