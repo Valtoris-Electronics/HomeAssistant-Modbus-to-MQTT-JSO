@@ -21,9 +21,9 @@ Home Assistant has absolutely no idea what to do with `45 1C 40 00`. You normall
 ## 2. The Hardware Bridge (The "No-Code" Approach)
 Instead of forcing HA to be a SCADA controller, we delegate the translation to a dedicated hardware bridge. For this setup, we use the **VALTORIS VT-DTU500** series. 
 
-* **Storage Modbus (Zero-Collision):** The gateway autonomously polls the meter every second and caches the data in its RAM. 
-* **Native JSON Parsing:** It strips away the CRC, decodes the 32-bit floats, and formats it into a human-readable JSON string.
-* **Direct MQTT Uplink:** It acts as an MQTT client, publishing directly to your local Mosquitto broker.
+* **Storage Modbus (Zero-Collision):** The gateway polls the meter on its own once a second and stores the data in its RAM. 
+* **Native JSON Parsing:**  It removes the CRC, decodes the 32-bit floats and formats it into a human-readable JSON string.
+* **Direct MQTT Uplink:** This is a MQTT client that publishes directly to your local Mosquitto broker.
 
 ## 3. The Configuration That Matters
 Log into the gateway's web interface. Here are the critical parameters:
