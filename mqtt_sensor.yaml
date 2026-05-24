@@ -1,0 +1,16 @@
+# Copy this into your Home Assistant configuration.yaml
+mqtt:
+  sensor:
+    - name: "Solar Active Power"
+      state_topic: "home/solar/power"
+      value_template: "{{ value_json.data.active_power_W }}"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+      
+    - name: "Solar Total Energy"
+      state_topic: "home/solar/power"
+      value_template: "{{ value_json.data.total_energy_kWh }}"
+      unit_of_measurement: "kWh"
+      device_class: energy
+      state_class: total_increasing
